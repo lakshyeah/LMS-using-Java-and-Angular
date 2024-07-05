@@ -1,0 +1,16 @@
+<p>login works!</p>
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+
+    <div class="form-group">
+      <label for="uname">User Name</label>
+      <input type="text" class="form-control" id="uname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="upass">Password </label>
+      <input type="password" class="form-control" id="upass" name="upass">
+    </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="button" class="btn btn-default">Reset</button>
+  </form>

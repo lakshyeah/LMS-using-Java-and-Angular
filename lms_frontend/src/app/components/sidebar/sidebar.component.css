@@ -1,0 +1,63 @@
+/* sidebar.component.css */
+
+.sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  padding-top: 0px;
+  transition: margin-left 0.3s;
+}
+
+.sidebar.closed {
+  margin-left: -120px;
+}
+
+.sidebar button.toggle-button {
+  margin-top: 0px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 3px;
+  height:50px;
+  width: 100%;
+  text-align: Right;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar a.linc{
+  color:white;
+  font-size: medium;
+}
+
+.sidebar a:hover{
+  color:#007BFF;
+  font-size:large
+}
+
+
+.sidebar button.toggle-button:hover {
+  background-color: rgb(13, 218, 24);
+}
+
+.sidebar.closed button.toggle-button {
+  padding-left: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+}

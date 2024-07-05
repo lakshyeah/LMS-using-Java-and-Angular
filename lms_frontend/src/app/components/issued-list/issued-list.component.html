@@ -1,0 +1,35 @@
+<div class="container">
+    <h2 class="text-center">Issued List</h2>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Book Id</th>                
+                <th>Member Id</th>
+                <th>Borrow Date</th>
+                <th>Member Name</th>
+                <th>Book Name</th>
+                <th>Phone Number</th>
+                <th>Defaulter</th>
+                <th>Email Id</th>
+                <th>Standard</th>
+                <th>Course</th>
+                <th>Retrieve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let issued of issuedlist">
+                <td> {{ issued.bookid }} </td>
+                <td> {{ issued.memberid }} </td>
+                <td> {{ issued.borrowdate }} </td>
+                <td> {{ issued.membername }} </td>
+                <td> {{ issued.bookname }} </td>
+                <td> {{ issued.phoneno }} </td>
+                <td> {{ issued.defaulter }} </td>
+                <td> {{ issued.emailid }} </td>
+                <td> {{ issued.standard }} </td>
+                <td> {{ issued.course }} </td>
+                <td><button type="button" class="btn btn-success">Retrieve</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

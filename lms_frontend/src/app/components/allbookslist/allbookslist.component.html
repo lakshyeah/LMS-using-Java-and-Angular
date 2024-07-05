@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center">All Books List</h2>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Book Id</th>
+                <th>Book Name</th>
+                <th>Availability</th>
+                <th>Book Topic</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Edition</th>
+                <th>Update</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let book of allbookslist">
+                <td> {{ book.bookid }} </td>
+                <td> {{ book.bookname }} </td>
+                <td> {{ book.availability }} </td>
+                <td> {{ book.booktopic }} </td>
+                <td> {{ book.price }} </td>
+                <td> {{ book.description }} </td>
+                <td> {{ book.edition }} </td>
+                <td><button type="button" class="btn btn-info">Update</button></td>
+                <td><button type="button" class="btn btn-danger">Remove</button></td>
+
+                <!-- <td>
+                    <button (click) = "updateMember(member.memberid)" class="btn btn-info">Update</button>
+                    <button (click) = "deleteMember(member.memberid)" class="btn btn-danger">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>

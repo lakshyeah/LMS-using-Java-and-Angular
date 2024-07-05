@@ -1,0 +1,25 @@
+<div class="Member">
+
+    <form (ngSubmit)="!updatememberform.invalid &&updateMember()" [formGroup] ="updatememberform"> 
+
+    <label for="membername">Member Name:</label>
+    <input type="text" class="form-control" id="membername" formControlName="membername" />
+  
+    <label for="phoneno">Phone Number:</label>
+    <input type="number" class="form-control" id="phoneno" formControlName="phoneno" />
+  
+    <label for="address">Address:</label>
+    <input type="text" class="form-control" id="address" formControlName="address" />
+
+    <label for="emailid">Email Id:</label>
+    <input type="email" class="form-control" id="emailid" formControlName="emailid" />
+    
+    <label for="standard">Standard:</label>
+    <input type="text" class="form-control" id="standard" formControlName="standard" />
+    
+    <label for="course">Course:</label>
+    <input type="text" class="form-control" id="course" formControlName="course" />
+
+    <button type="submit">Update</button>
+</form>
+</div>

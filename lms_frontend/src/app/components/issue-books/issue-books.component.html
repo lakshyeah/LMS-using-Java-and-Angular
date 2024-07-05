@@ -1,0 +1,25 @@
+<div class="form-container">
+ <form [formGroup]="issueBookForm">
+  <div class="form-group">
+    <label for="bookId">Book ID:</label>
+    <input type="number" id="bookId" formControlName="bookId" />  
+  </div>
+  <div *ngIf="issueBookForm.get('bookId')?.hasError('required')">Book ID is required.</div>
+  <div *ngIf="issueBookForm.get('bookId')?.hasError('pattern')">Invalid Book ID.</div>
+
+  <div class="form-group">
+    <label for="memberId">Member ID:</label>
+    <input type="number" id="memberId" formControlName="memberId" />    
+  </div>
+  <div *ngIf="issueBookForm.get('memberId')?.hasError('required')">Member ID is required.</div>
+  <div *ngIf="issueBookForm.get('memberId')?.hasError('pattern')">Invalid Member ID.</div>
+
+  <button type="button" (click)="OnSubmit()">Issue</button>
+</form>
+
+<div *ngIf="bookExists === true">Book exists and is available!</div>
+<div *ngIf="bookExists === false">Book either does not exist or is not available.</div>
+
+<div *ngIf="memberExists === true">Member exists!</div>
+<div *ngIf="memberExists === false">Member does not exist.</div>
+</div>

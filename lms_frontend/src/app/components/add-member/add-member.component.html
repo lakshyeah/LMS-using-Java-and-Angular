@@ -1,0 +1,165 @@
+<div class="Member">
+    <div class="heading">
+<!--Username-->
+ <form (ngSubmit)="!todoForm.invalid && saveTodo()" #todoForm="ngForm"> 
+<!-- <form> -->
+    <div class="input-group input-group-lg">
+        <label for="name"><b></b></label>
+        <input 
+            placeholder="Name"
+            type="text" 
+            class="form-control"
+            name="name"
+            minlength="4"
+            required
+            #name="ngModel"
+            [(ngModel)]="add.membername"
+            pattern="^[A-Za-z ]*"
+        >
+    </div>
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf="name.errors?.['required']">
+            Name is required
+        </div>
+        <div *ngIf="name.errors?.['minlength']">
+            Name should be atleast 4 characters
+        </div>
+        <div *ngIf="name.errors?.['pattern']">
+            Should have only alphabets
+        </div>
+    </div>
+    
+    <!--Description-->
+    <div class="input-group input-group-lg">
+        <label for="phonenumber"><b></b></label>
+        <input 
+            placeholder="Phonenumber"
+            type="text" 
+            class="form-control"
+            name="phonenumber"
+            required
+            minlength="10"
+            maxlength="10"
+            #phonenumber="ngModel"
+            [(ngModel)]="add.phoneno"
+            pattern="^[6-9]\d{9}$"
+        >
+    </div>
+    <div *ngIf="phonenumber.invalid && (phonenumber.dirty || phonenumber.touched)">
+        <div *ngIf="phonenumber.errors?.['required']">
+            phone numbers is required
+        </div>
+        <div *ngIf="phonenumber.errors?.['minlength']">
+            number Should be 10 digits
+        </div>
+        <div *ngIf="phonenumber.errors?.['pattern']">
+            Should contains only numbers
+        </div>
+    </div>
+    
+    <!--Done-->
+    
+    <div class="input-group input-group-lg">
+        <label for="address"><b></b></label>
+        <input 
+        placeholder="Address"
+            type="text" 
+            class="form-control"
+            name="address"
+            required
+            #address="ngModel"
+            [(ngModel)]="add.address"
+        >
+    </div>
+    <div *ngIf="address.invalid && (address.dirty || address.touched)">
+        <div *ngIf="address.errors?.['required']">
+            Address is Required
+        </div>
+        <!-- <div *ngIf="address.errors?.['pattern']">
+            Address should be 
+        </div> -->
+    </div>
+    
+    <div class="input-group input-group-lg">
+        <label for="Email"><b></b></label>
+        <input 
+            placeholder="Email"
+            type="text"
+            class="form-control"
+            name="email"
+            required
+            #email="ngModel"
+            [(ngModel)]="add.emailid"
+            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$"
+        >
+    </div>
+    <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors?.['required']">
+            Email  is required
+        </div>
+      
+        <div *ngIf="email.errors?.['pattern']">
+            Invalid Email
+        </div>
+    </div>
+    <!-- <div class="form-group">
+        <label for="targate"><b>Targate</b></label>
+        <input 
+            type="date" 
+            class="form-control"
+            name="targatedate"
+            required
+            #targate="ngModel" 
+            [ngModel]="todo.targetDate | date:'yyyy-MM-dd'"
+            (ngModelChange)="todo.targetDate=$event"
+        >
+    </div> -->
+    <!-- <div *ngIf="targatedate.invalid && (targatedate.dirty || targatedate.touched)">
+        <div *ngIf="targatedate.errors?.['required']">
+            Date is required
+        </div>
+    </div> -->
+
+    <div class="input-group input-group-lg">
+        <label for="standard"><b></b></label>
+        <input 
+            placeholder="Standard"
+            type="text" 
+            class="form-control"
+            name="standard"
+            required
+            #standard="ngModel"
+            [(ngModel)]="add.standard"
+        >
+    </div>
+    <div *ngIf="standard.invalid && (standard.dirty || standard.touched)">
+        <div *ngIf="standard.errors?.['required']">
+            standard is Required
+        </div>
+    </div>
+
+    <div class="input-group input-group-lg">
+        <label for="course"><b></b></label>
+        <input 
+            placeholder="Course"
+            type="text" 
+            class="form-control"
+            name="course"
+            required
+            #course="ngModel"
+            [(ngModel)]="add.course"
+        >
+    </div>
+    <div *ngIf="course.invalid && (course.dirty || course.touched)">
+        <div *ngIf="course.errors?.['required']">
+            course is Required
+        </div>
+        <!-- <div *ngIf="address.errors?.['pattern']">
+            Address should be 
+        </div> -->
+    </div>    
+
+    <div>
+        <button type="submit" class="btn btn-success">Save</button>
+    </div>
+</form></div></div>

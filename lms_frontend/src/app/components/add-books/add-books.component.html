@@ -1,0 +1,31 @@
+<div class="card">
+
+  <form [formGroup]="addBooksForm" (ngSubmit)="onSubmit()">
+    <label for="bookname">Book Name:</label>
+    <input type="text" id="bookname" formControlName="bookname" />
+  
+    <label for="booktopic">Book Topic:</label>
+    <input type="text" id="booktopic" formControlName="booktopic" />
+  
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" formControlName="quantity" />
+  
+    <label for="authorname">Author Name:</label>
+    <input type="text" id="authorname" formControlName="authorname" />
+  
+    <label for="category">Category:</label>
+    <input type="text" id="category" formControlName="category" />
+  
+    <label for="edition">Edition:</label>
+    <input type="text" id="edition" formControlName="edition" />
+  
+    <label for="publisher">Publisher:</label>
+    <input type="text" id="publisher" formControlName="publisher" />
+  
+    <label for="price">Price:</label>
+    <input type="number" id="price" formControlName="price" />
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+</div>
